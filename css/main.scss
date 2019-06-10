@@ -1,0 +1,121 @@
+---
+---
+
+@mixin bold-serif {
+  font-family: 'grad-bold', sans-serif;
+}
+
+@mixin italic-serif {
+  font-family: 'grad-italic', sans-serif;
+}
+
+@font-face {
+  font-family: 'grad-regular';
+  src: url('/css/grad-regular-webfont.woff2') format('woff2'),
+       url('/css/grad-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'grad-bold';
+  src: url('/css/grad-bold-webfont.woff2') format('woff2'),
+       url('/css/grad-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'grad-italic';
+  src: url('/css/grad-italic-webfont.woff2') format('woff2'),
+       url('/css/grad-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Moderne Sans';
+  src: url('/css/moderne-sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'grad-regular', serif;
+}
+
+strong {
+  font-family: 'grad-bold', serif;
+}
+
+em {
+  font-family: 'grad-italic', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(27, 126, 187);
+  font-family: 'Moderne Sans', sans-serif;
+}
+
+article {
+  width: 80vw;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+a {
+  $base-color: hsl(6, 80%, 48%);
+  color: $base-color;
+  outline-color: $base-color;
+  text-decoration: none;
+
+  &:visited {
+    color: hsl(6, 40%, 48%);
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color:rgb(210, 80, 232)
+  }
+}
+
+.homepage {
+  &-section-header {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    position: relative;
+
+    a,
+    a:hover,
+    a:active,
+    a:visited,
+    a:focus {
+      color: rgba(black, .3);
+      float: left;
+      line-height: 1;
+      margin-left: -1.25rem;
+      padding-right: .25rem;
+    }
+
+    a {
+      visibility: hidden;
+    }
+
+    &:hover,
+    &:focus {
+      a {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+#contact-list {
+  margin-top: 0;
+}
