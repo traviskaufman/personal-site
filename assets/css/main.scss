@@ -184,7 +184,7 @@ footer {
     text-align: center;
     color: rgba(black, 0.54);
     font-size: 0.875rem;
-    line-height: 1;
+    line-height: 1.4;
     letter-spacing: 0.25;
   }
 }
@@ -193,13 +193,15 @@ footer {
   height: 100vh;
   width: 100vw;
   background-color: #121212;
-  background-image: url(/assets/images/chevron-down.svg);
-  background-position: 50% 95%;
-  background-repeat: no-repeat;
   color: white;
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 2fr 1fr auto;
   grid-template-columns: 1fr 3fr;
+  transition: transform 300ms ease;
+
+  &.moved {
+    transition: none;
+  }
 
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
@@ -246,6 +248,29 @@ footer {
 
     @media (max-width: 600px) {
       justify-self: center;
+    }
+  }
+
+  .down-arrow {
+    position: absolute;
+    bottom: 8px;
+    left: calc(50% - (90px / 2));
+    width: 90px;
+    height: 47px;
+    @media (max-width: 1080px) {
+      grid-column: 1;
+    }
+    background-image: url(/assets/images/chevron-down.svg);
+    background-position: 50% 95%;
+    background-repeat: no-repeat;
+    justify-self: center;
+    cursor: pointer;
+    transition: opacity 200ms ease;
+    opacity: 0.2;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
     }
   }
 }

@@ -22,6 +22,7 @@
       <div class="cta-wrapper">
         <a href="mailto:travis.kaufman@gmail.com">Let’s chat</a>
       </div>
+      <a href="#experience" class="down-arrow" aria-label="Experience"></a>
     </section>
     <section id="experience" class="storybook-layout">
       <div class="content">
@@ -152,4 +153,29 @@
   <footer>
     <p>Copyright © 2019 Travis Kaufman, All Rights Reserved. Created with ❤️in NYC.</p>
   </footer>
+  <script>
+    (() => {
+      document.querySelector('a.down-arrow').addEventListener('click', fauxScrollDown);
+
+      function fauxScrollDown() {
+        const helloSection = document.getElementById('hello');
+        const experienceSection = document.getElementById('experience');
+        // Don't let people scroll while the animation is taking place. Hopefully this doesn't kill the browser
+        document.body.style.overflow = 'hidden';
+
+        offsetTop = window.pageYOffset;
+        helloSection.classList.add('moved');
+        helloSection.style.transform = `translateY(calc(100% - ${offsetTop}px))`;
+        window.location.href = '#experience';
+        helloSection.addEventListener('transitionend', transitionEndCallback);
+        helloSection.classList.remove('moved');
+        helloSection.style.transform = null;
+
+        function transitionEndCallback() {
+          document.body.style.overflow = null;
+          helloSection.removeEventListener('transitionend', transitionEndCallback);
+        }
+      }
+    })();
+  </script>
 </body>
