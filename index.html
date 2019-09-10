@@ -5,103 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="/css/main.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Space+Mono:400,700|Lobster&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
   <title>Travis Kaufman: A Software Engineer</title>
 </head>
 
 <body>
   <main>
-    <article>
-      <section>
-        <p>
-          <h1 class="homepage-section-header" id="name"><a href="#name">#</a>My name</h1> is <strong>Travis
-            Kaufman</strong> and
-          <strong>I am a Software Engineer</strong> based out of <strong>New York City</strong>.
+    <section id="hello">
+      <div class="quip">
+        <h1>Hi! I'm <span class="name">Travis</span></h1>
+        <h2>I'm a NYC-based software engineer specializing in UI / UX development</h2>
+      </div>
+      <div class="cta-wrapper">
+        <a href="mailto:travis.kaufman@gmail.com">Let’s chat</a>
+      </div>
+    </section>
+    <section id="experience" class="storybook-layout">
+      <div class="content">
+        <h2>Let me bring your vision to life</h2>
+        <p class="content-intro">
+          I take pride in building beautiful, meaningful, and accessible experiences that delight
+          your users and help unlock the true potential of your product. I have worked across a variety
+          of companies, industries, and technology stacks delivering high-quality, reliable,
+          dependable software that you can trust to meet and exceed the expectations of its stakeholders.
+          Some of my favorite projects I’ve worked on include:
         </p>
-
-        <p>I specializing in data engineering, front-end engineering, and machine learning for computer vision.</p>
-
-        <p>I am not <a href="https://en.wikipedia.org/wiki/Travis_Kauffman">the boxer</a> or <a
-            href="https://www.washingtonpost.com/science/2019/02/15/trail-runner-survived-life-or-death-wrestling-match-with-mountain-lion-heres-his-story/?noredirect=on&amp;utm_term=.783994392ab4">the
-            dude who killed a mountain
-            lion with his bare hands</a> (although admittedly that is pretty badass).</p>
-      </section>
-      <section>
-        <h1 class="homepage-section-header" id="skills"><a href="#skills">#</a>My skills and experience</h1> fall into 3
-        main categories:
-        <h2>Front-end development</h2>
-        <p><em>Ex: Google, MDC-Web, Refinery29, AppNexus</em></p>
-        <ul>
-          <li>UI library and framework development (ex: MDC-Web)</li>
-          <li>UX Engineering / Prototyping</li>
-          <li>Style Guide Creation / Maintenance</li>
-          <li>Frontend performance optimization</li>
-        </ul>
-        <h2>Data Engineering and Analytics</h2>
-        <p><em>Google, Refinery29</em></p>
-        <ul>
-          <li>ETL Pipelines</li>
-          <li>Data warehousing and schema development</li>
-          <li>Metric definitions</li>
-          <li>Compute Infrastructure</li>
-          <li>Dashboarding / Data Visualization</li>
-        </ul>
-        <h2>Machine Learning</h2>
-        <p><em>Google, Singularity Studios :p</em></p>
-        <ul>
-          <li>Model Development</li>
-          <li>Model training / validation pipelines</li>
-          <li>Optimizationa and Productionization</li>
-          <li>Testing, Monitoring, Tooling and Infrastructure</li>
-        </ul>
-        I've used a wide variety of tools during this time (WORK THIS PART IN), such as:
-        <ul>
-          <li>React</li>
-          <li>Spark / PySpark</li>
-          <li>Tensorflow</li>
-          <li>BigQuery</li>
-          <li>GCP</li>
-          <li>Scala</li>
-          <li>Python</li>
-          <li>SciKit Learn</li>
-          <li>Docker</li>
-          <li>Redis</li>
-          <li>Postgresql</li>
-          <li>Airflow</li>
-          <li>Beam</li>
-          <li>D3.js</li>
-          <li>Angular</li>
-          <li>jQuery</li>
-          <li>Sass</li>
-          <li>NodeJS</li>
-          <li>ES6</li>
-          <li>Keras</li>
-        </ul>
-      </section>
-      <section>
+        <section class="project">
+          <h3 class="project-title">Material Components for the Web</h3>
+          <p class="project-description">
+            Lead a cross-functional team distributed across three time zones to design,
+            implement, and build Google’s canonical component library for Material Design,
+            the first of its kind with usage on over two million unique domains worldwide,
+            multiple third-party libraries, and is currently being integrated into Angular’s Material Design
+            framework. <a target="_blank" href="https://github.com/material-components/material-components-web">Check it
+              out on
+              Github</a>
+          </p>
+        </section>
+        <section class="project">
+          <h3 class="project-title">Google Cloud Platform</h3>
+          <p class="project-description">
+            I was part of the core team that built and shipped the frontend for Cloud's first-ever <a target="_blank"
+              href="https://cloud.google.com/solutions/iot">IoT Platform</a>.
+            The UI, fondly known as the "console", is one of the largest Angular apps in the world. After IoT, I went on
+            to help
+            build Cloud's first-ever business intelligence centered around measuring the quality of our user experience.
+          </p>
+        </section>
+        <section class="project">
+          <h3 class="project-title">Refinery29 mobile website</h3>
+          <p class="project-description">
+            While at Refinery29, I worked with a small core team to build their first-ever website specifically for
+            mobile
+            browsers. The mobile site was used by millions of people, and much of the frontend infrastructure was
+            adopted
+            throughout the entire codebase. I also had the pleasure of engaging with Pivotal Labs on this project, where
+            I
+            fell in love with extreme programming and agile practices.
+          </p>
+        </section>
+      </div>
+    </section>
+    <section id="skills-frontend" class="storybook-layout">
+      <div class="content">
+        <h2>My expertise is your success</h2>
         <p>
-          <h1 class="homepage-section-header" id="philosophy"><a href="#philosophy">#</a>My software development
-            philosophy</h1> places trust,
-          mutual
-          respect, and effective communication at the center of every project I undertake.
+          I have worked with all major front-end frameworks, technologies, and infrastructure (and have contributed to
+          <a href="https://github.com/sinonjs/sinon" target="_blank">quite</a> <a
+            href="https://github.com/jshint/jshint" target="_blank">a</a>
+          <a href="https://github.com/angular/components" target="_blank">few</a> as well). I can use this knowledge to
+          help you with all types of
+          frontend solutions, including:
         </p>
-
-        <p>I believe in a harmonious culture that place <em>people first</em>, and empowers them to execute against a
-          shared vision.</p>
-
-        <p>I work at a deliberate, sustainable pace, and strive to promote gowth and improvement within myself and my
-          peers.</p>
-      </section>
-      <section>
-        <h1 class="homepage-section-header" id="contact"><a href="#contact">#</a>My contact information</h1> is as
-        follows:
-        <ul id="contact-info">
-          <li><a href="mailto:travis.kaufman@gmail.com">travis.kaufman [at] gmail.com</a></li>
-          <li><a href="https://github.com/traviskaufman">@traviskaufman on Github</a></li>
-          <li><a href="https://twitter.com/traviskaufman">@traviskaufman on Twitter</a></li>
-          <li><a href="www.linkedin.com/in/travis-kaufman-ab9b6b30">Travis Kaufman on LinkedIn</a></li>
+        <section class="solution">
+          <h3>User-facing applications</h3>
+          <ul>
+            <li>Enterprise applications, B2B white-label software, BI dashboards</li>
+            <li>Consumer web and mobile applications, progressive web apps</li>
+            <li>Internal tools and UX prototyping</li>
+          </ul>
+        </section>
+        <section class="solution">
+          <h3>Frontend framework development</h3>
+          <ul>
+            <li>Framework design and architecture, component library / style guide development</li>
+            <li>Performance optimization, including profiling, benchmarking, and regression detection</li>
+            <li>Team structure, design / engineering collaboration, open-source governance</li>
+          </ul>
+        </section>
+        <section class="solution">
+          <h3>UI infrastructure</h3>
+          <ul>
+            <li>Unit / End-to-end testing infrastructure and automation</li>
+            <li>Internationalization workflow, accessibility conformance pipelines</li>
+            <li>Continuous integration and deployment</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+    <section id="skills-backend" class="storybook-layout">
+      <h2>Beyond just frontend</h2>
+      <div class="content">
+        <p>I have worked on all different types of projects, including:</p>
+        <ul>
+          <li>Full-stack applications</li>
+          <li>ETL systems</li>
+          <li>Machine learning model development</li>
+          <li>iOS apps</li>
         </ul>
-      </section>
-    </article>
+        <p>
+          Although I specialize in frontend, I have a passion for learning new langauges and technologies, and truly
+          enjoy working on all types of software.
+        </p>
+      </div>
+      <div class="cta-wrapper">
+        <a target="_blank" href="/assets/traviskaufman-resume.pdf">View resumé</a>
+      </div>
+    </section>
+    <section id="contact">
+      <h1>Let's connect</h1>
+      <nav class="social-icons">
+        <a href="mailto:travis.kaufman@gmail.com" class="social-icon">
+          <img class="social-icon-img" src="/assets/images/email.svg">
+          <span class="social-icon-text">Email</span>
+        </a>
+        <a href="https://github.com/traviskaufman" class="social-icon">
+          <img class="social-icon-img" src="/assets/images/gh.svg">
+          <span class="social-icon-text">Github</span>
+        </a>
+        <a href="https://www.linkedin.com/in/travis-kaufman-ab9b6b30/" class="social-icon">
+          <img class="social-icon-img" src="/assets/images/linkedin.svg">
+          <span class="social-icon-text">LinkedIn</span>
+        </a>
+        <a href="https://twitter.com/traviskaufman" class="social-icon">
+          <img class="social-icon-img" src="/assets/images/twitter.svg">
+          <span class="social-icon-text">Twitter</span>
+        </a>
+      </nav>
+    </section>
   </main>
+  <footer>
+    <p>Copyright © 2019 Travis Kaufman, All Rights Reserved. Created with ❤️in NYC.</p>
+  </footer>
 </body>
