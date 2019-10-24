@@ -160,21 +160,13 @@
       function fauxScrollDown() {
         const helloSection = document.getElementById('hello');
         const experienceSection = document.getElementById('experience');
-        // Don't let people scroll while the animation is taking place. Hopefully this doesn't kill the browser
-        document.body.style.overflow = 'hidden';
 
         offsetTop = window.pageYOffset;
         helloSection.classList.add('moved');
         helloSection.style.transform = `translateY(calc(100% - ${offsetTop}px))`;
         window.location.href = '#experience';
-        helloSection.addEventListener('transitionend', transitionEndCallback);
         helloSection.classList.remove('moved');
         helloSection.style.transform = null;
-
-        function transitionEndCallback() {
-          document.body.style.overflow = null;
-          helloSection.removeEventListener('transitionend', transitionEndCallback);
-        }
       }
     })();
   </script>
