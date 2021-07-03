@@ -68,6 +68,10 @@ const Main = styled.main`
     grid-row-gap: 2rem;
   }
 
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
+
   ${Headline} {
     grid-row: 1;
     grid-column: 2;
