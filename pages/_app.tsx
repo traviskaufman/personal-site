@@ -22,7 +22,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <NextSeo
         title="Travis Kaufman"
-        description="Front-end developer from New York City."
         canonical="https://traviskaufmancodes.com"
         openGraph={{
           title: "Travis Kaufman",
