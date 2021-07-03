@@ -142,7 +142,7 @@ export default function Home() {
         <strong>Travis Kaufman</strong> is a front-end developer from New York.
       </Headline>
       <Headshot>
-        <Image layout="fill" src="/headshot.webp" alt="A headshot of Travis" />
+        <Image layout="fill" src="/headshot.jpg" alt="A headshot of Travis" />
       </Headshot>
       <SocialLinks>
         <li>
