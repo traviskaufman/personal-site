@@ -6,116 +6,12 @@ import GithubIcon from "@fortawesome/fontawesome-free/svgs/brands/github.svg";
 import MediumIcon from "@fortawesome/fontawesome-free/svgs/brands/medium.svg";
 import FileIcon from "@fortawesome/fontawesome-free/svgs/regular/file.svg";
 
-console.debug(GithubIcon);
-
-const Main = styled.main`
-  display: grid;
-  grid-template: minmax(40vh, auto) repeat(2, auto) / 1fr;
-  place-content: center;
-  margin-top: 1rem;
-
-  // :)
-  h2 {
-    @media (max-width: 768px) {
-      margin-left: 1rem;
-    }
-  }
-`;
-
 const Headshot = styled.div`
   position: relative;
   border-radius: 50%;
   width: 300px;
   height: 300px;
   overflow: hidden;
-  margin: 0 auto;
-`;
-
-const NameTag = styled.section`
-  display: grid;
-  place-content: center;
-  grid-template: 1fr / repeat(2, auto);
-  grid-gap: 2rem;
-  width: 100%;
-  text-align: center;
-  margin-top: -1rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  color: black;
-  background-color: white;
-
-  @media (max-width: 768px) {
-    grid-template: repeat(2, auto) / 1fr;
-    grid-gap: 0.5rem;
-  }
-
-  h1 {
-    grid-column: 2;
-    grid-row: 1;
-    font-size: 6rem;
-    margin-right: 1rem;
-    display: flex;
-    align-items: center;
-
-    @media (max-width: 980px) {
-      font-size: 4rem;
-    }
-
-    @media (max-width: 768px) {
-      display: block;
-      grid-column: 1;
-      grid-row: 2;
-      margin-top: 0.5rem;
-    }
-  }
-
-  ${Headshot} {
-    grid-column: 1;
-    grid-row: 1;
-
-    @media (max-width: 768px) {
-      grid-column: 1;
-      grid-row: 1;
-    }
-  }
-`;
-
-const About = styled.section`
-  display: grid;
-  grid-template: 1fr / repeat(3, 1fr);
-  grid-gap: 1rem;
-
-  @media (max-width: 980px) {
-    grid-template: repeat(3, 1fr) / 1fr;
-  }
-
-  p {
-    font-size: 1.2rem;
-    display: grid;
-    place-content: center;
-    padding: 0.5rem;
-    text-align: center;
-    background: linear-gradient(
-      45deg,
-      rgba(83, 89, 174, 1) 0%,
-      rgba(142, 57, 161, 1) 21%,
-      rgba(229, 23, 139, 1) 90%
-    );
-    margin-top: -1rem;
-
-    @media (max-width: 980px) {
-      margin: 0 auto;
-      width: 600px;
-    }
-
-    @media (max-width: 600px) {
-      width: 100%;
-    }
-  }
-`;
-
-const BelowTheFold = styled.div`
-  max-width: 1024px;
   margin: 0 auto;
 `;
 
@@ -133,24 +29,90 @@ const SocialLinks = styled.ul`
   }
 `;
 
+const Headline = styled.h1`
+  --margin-pull: -0.55rem;
+  margin-left: calc(var(--margin-pull) * -1);
+  font-weight: 300;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 980px) {
+    strong {
+      display: block;
+      font-weight: 100;
+      font-style: italic;
+      font-size: 6rem;
+      font-family: "Exo 2", sans-serif;
+      text-align: left;
+      line-height: 1.5;
+      margin-left: var(--margin-pull);
+    }
+  }
+`;
+
+const Main = styled.main`
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: grid;
+  grid-template: minmax(40vh, auto) auto auto / 1fr 3fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 4rem;
+  place-content: center;
+  padding: 1rem;
+
+  @media (max-width: 980px) {
+    grid-row-gap: 2rem;
+  }
+
+  ${Headline} {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+
+    @media (max-width: 980px) {
+      grid-row: 2;
+      grid-column: span 2;
+    }
+  }
+
+  ${Headshot} {
+    grid-row: 1;
+    grid-column: 1;
+
+    @media (max-width: 980px) {
+      grid-column: span 2;
+    }
+  }
+
+  ${SocialLinks} {
+    grid-row: 3;
+    grid-column: span 2;
+  }
+`;
+
 const SocialLink = styled.a`
-  --color: 50, 197, 255;
+  --color: 32, 30, 32;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   border-radius: 4px;
   border: 1px solid rgb(var(--color));
-  font-weight: bold;
+  font-weight: 600;
   color: var(---color);
   text-decoration: none;
   outline-color: var(--color);
   position: relative;
 
   background-color: rgba(var(--color), 0);
-  transition: background-color 100ms ease;
+  transition: background-color 100ms ease, color 100ms ease;
   &:hover,
   &:focus {
     background-color: rgba(var(--color), 1);
+    color: white;
   }
 
   span {
@@ -176,74 +138,54 @@ const SocialLink = styled.a`
 export default function Home() {
   return (
     <Main>
-      <NameTag>
-        <h1>Hi, I'm Travis!</h1>
-        <Headshot>
-          <Image
-            layout="fill"
-            src="/headshot.webp"
-            alt="A headshot of Travis"
-          />
-        </Headshot>
-      </NameTag>
-      <BelowTheFold>
-        <About>
-          <p>I'm a software engineer specializing in UI / UX development.</p>
-          <p>I live in NYC and love it here.</p>
-          <p>
-            My favorite food is my mom's pesto{" "}
-            <span style={{ color: "rgba(255, 255, 255, 0.7)" }}>
-              (and I'm not just saying that because she'd come after me if I
-              said anything else 🥶)
+      <Headline>
+        <strong>Travis Kaufman</strong> is a front-end developer from New York.
+      </Headline>
+      <Headshot>
+        <Image layout="fill" src="/headshot.webp" alt="A headshot of Travis" />
+      </Headshot>
+      <SocialLinks>
+        <li>
+          <SocialLink href="https://github.com/traviskaufman">
+            <span role="presentation">
+              <GithubIcon />
             </span>
-          </p>
-        </About>
-        <h2>
-          You can find me as <code>traviskaufman</code> on:
-        </h2>
-        <SocialLinks>
-          <li>
-            <SocialLink href="https://github.com/traviskaufman">
-              <span role="presentation">
-                <GithubIcon />
-              </span>
-              GitHub
-            </SocialLink>
-          </li>
-          <li>
-            <SocialLink href="https://twitter.com/traviskaufman">
-              <span role="presentation">
-                <TwitterIcon />
-              </span>
-              Twitter
-            </SocialLink>
-          </li>
-          <li>
-            <SocialLink href="https://medium.com/@traviskaufman">
-              <span role="presentation">
-                <MediumIcon />
-              </span>
-              Medium
-            </SocialLink>
-          </li>
-          <li>
-            <SocialLink href="https://www.linkedin.com/in/traviskaufman-thedeveloper/">
-              <span role="presentation">
-                <LinkedInIcon />
-              </span>
-              LinkedIn
-            </SocialLink>
-          </li>
-          <li>
-            <SocialLink href="/resume.pdf">
-              <span role="presentation">
-                <FileIcon />
-              </span>
-              My Résumé
-            </SocialLink>
-          </li>
-        </SocialLinks>
-      </BelowTheFold>
+            GitHub
+          </SocialLink>
+        </li>
+        <li>
+          <SocialLink href="https://twitter.com/traviskaufman">
+            <span role="presentation">
+              <TwitterIcon />
+            </span>
+            Twitter
+          </SocialLink>
+        </li>
+        <li>
+          <SocialLink href="https://medium.com/@traviskaufman">
+            <span role="presentation">
+              <MediumIcon />
+            </span>
+            Medium
+          </SocialLink>
+        </li>
+        <li>
+          <SocialLink href="https://www.linkedin.com/in/traviskaufman-thedeveloper/">
+            <span role="presentation">
+              <LinkedInIcon />
+            </span>
+            LinkedIn
+          </SocialLink>
+        </li>
+        <li>
+          <SocialLink href="/resume.pdf">
+            <span role="presentation">
+              <FileIcon />
+            </span>
+            Résumé
+          </SocialLink>
+        </li>
+      </SocialLinks>
     </Main>
   );
 }

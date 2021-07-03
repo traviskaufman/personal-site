@@ -10,9 +10,8 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #171717;
-    color: white;
+    color: rgb(32, 30, 32);
+    font-family: "Open Sans", sans-serif;
   }
 `;
 
@@ -28,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,100&family=Open+Sans:wght@300;600&display=swap"
           rel="stylesheet"
         />
       </Head>
