@@ -1,6 +1,8 @@
+import "normalize.css";
+
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import "normalize.css";
+import { NextSeo } from "next-seo";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -18,8 +20,25 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <NextSeo
+        title="Travis Kaufman"
+        description="Front-end developer from New York City."
+        canonical="https://traviskaufmancodes.com"
+        openGraph={{
+          title: "Travis Kaufman",
+          images: [
+            {
+              url: "https://traviskaufmancodes.com/headshot.jpg",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@traviskaufman",
+          site: "https://traviskaufmancodes.com",
+          cardType: "summary_large_image",
+        }}
+      />
       <Head>
-        {/* TODO: SEO */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
