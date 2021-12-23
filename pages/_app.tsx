@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <title>Travis Kaufman</title>
         <meta name="googlebot" content="index,follow" />
         <meta name="robots" content="index,follow" />
         <meta name="twitter:card" content="summary_large_image" />
