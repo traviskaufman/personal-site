@@ -1,18 +1,9 @@
-import styled from "styled-components";
 import * as THREE from "three";
 import { Sky } from "./three-libs/Sky";
-
-const Wrapper = styled.div`
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -90;
-`;
+import styles from "./BackgroundFX.module.css";
 
 export default function BackgroundFX() {
-  return <Wrapper ref={(el) => el && main(el)} />;
+  return <div className={styles.wrapper} ref={(el) => el && main(el)} />;
 }
 
 function main(el: HTMLElement) {
@@ -41,6 +32,7 @@ function main(el: HTMLElement) {
 
   init();
   render(0);
+  el.style.opacity = "1";
 
   return cleanup;
 
