@@ -1,43 +1,25 @@
 import "normalize.css";
+import "./globalStyles.css";
 
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { NextSeo } from "next-seo";
-import { createGlobalStyle } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-
-  html, body {
-    margin: 0;
-    color: rgb(32, 30, 32);
-    font-family: "Open Sans", sans-serif;
-  }
-`;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <NextSeo
-        title="Travis Kaufman"
-        canonical="https://traviskaufmancodes.com"
-        openGraph={{
-          title: "Travis Kaufman",
-          images: [
-            {
-              url: "https://traviskaufmancodes.com/headshot.jpg",
-            },
-          ],
-        }}
-        twitter={{
-          handle: "@traviskaufman",
-          site: "https://traviskaufmancodes.com",
-          cardType: "summary_large_image",
-        }}
-      />
       <Head>
+        <meta name="googlebot" content="index,follow" />
+        <meta name="robots" content="index,follow" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="https://traviskaufmancodes.com" />
+        <meta name="twitter:creator" content="@traviskaufman" />
+        <meta property="og:title" content="Travis Kaufman" />
+        <meta property="og:url" content="https://traviskaufmancodes.com" />
+        <meta
+          property="og:image"
+          content="https://traviskaufmancodes.com/headshot.jpg"
+        />
+        <link rel="canonical" href="https://traviskaufmancodes.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -49,7 +31,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
-      <GlobalStyle />
       <Component {...pageProps} />
     </>
   );

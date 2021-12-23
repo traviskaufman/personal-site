@@ -1,0 +1,9 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  color: rgb(32, 30, 32);
+  font-family: "Open Sans", sans-serif;
+}
