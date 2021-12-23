@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import Image from "next/image";
 import styled from "styled-components";
 import TwitterIcon from "@fortawesome/fontawesome-free/svgs/brands/twitter.svg";
@@ -5,6 +6,8 @@ import LinkedInIcon from "@fortawesome/fontawesome-free/svgs/brands/linkedin.svg
 import GithubIcon from "@fortawesome/fontawesome-free/svgs/brands/github.svg";
 import MediumIcon from "@fortawesome/fontawesome-free/svgs/brands/medium.svg";
 import FileIcon from "@fortawesome/fontawesome-free/svgs/regular/file.svg";
+
+import BackgroundFX from "../components/BackgroundFX";
 
 const Headshot = styled.div`
   position: relative;
@@ -190,6 +193,7 @@ export default function Home() {
           </SocialLink>
         </li>
       </SocialLinks>
+      <BackgroundFX />
     </Main>
   );
 }
