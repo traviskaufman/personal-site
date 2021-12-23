@@ -32,7 +32,9 @@ function main(el: HTMLElement) {
 
   init();
   render(0);
-  el.style.opacity = "1";
+  setTimeout(() => {
+    el.style.opacity = "1";
+  }, 250);
 
   return cleanup;
 

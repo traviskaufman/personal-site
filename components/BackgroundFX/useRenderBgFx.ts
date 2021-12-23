@@ -8,10 +8,10 @@ export default function useRenderBgFx(): boolean {
   useEffect(() => {
     if (!timerRef.current) {
       timerRef.current = setTimeout(() => {
-        setRenderBgFx(
-          window.matchMedia("(pointer: none) OR (prefers-reduced-motion)")
-            .matches
-        );
+        const preventRenderBgFx = window.matchMedia(
+          "(pointer: none) OR (prefers-reduced-motion)"
+        ).matches;
+        setRenderBgFx(!preventRenderBgFx);
       }, 350);
     }
 
