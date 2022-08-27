@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <h1 className={styles.headline}>
-        <strong className={styles.lead}>Travis Kaufman</strong> is a front-end
-        developer from New York.
+        <strong className={styles.lead}>Travis Kaufman</strong> is a software
+        engineer from New York.
       </h1>
       <div className={styles.headshot}>
         <Image layout="fill" src="/headshot.jpg" alt="A headshot of Travis" />

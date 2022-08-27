@@ -8,13 +8,16 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Travis Kaufman</title>
+        <title>Travis Kaufman - Software Engineer</title>
         <meta name="googlebot" content="index,follow" />
         <meta name="robots" content="index,follow" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="https://traviskaufmancodes.com" />
         <meta name="twitter:creator" content="@traviskaufman" />
-        <meta property="og:title" content="Travis Kaufman" />
+        <meta
+          property="og:title"
+          content="Travis Kaufman - Software Engineer"
+        />
         <meta property="og:url" content="https://traviskaufmancodes.com" />
         <meta
           property="og:image"
