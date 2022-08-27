@@ -53,7 +53,7 @@ export default function Home() {
           />
         </li>
         <li>
-          <SocialLink href="/resume.pdf" label="Résumé" icon={<FileIcon />} />
+          <SocialLink href="/resume.pdf" label="Resume" icon={<FileIcon />} />
         </li>
       </ul>
       <Suspense fallback={null}>{renderBgFx && <BackgroundFX />}</Suspense>
