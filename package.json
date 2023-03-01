@@ -13,7 +13,7 @@
     "normalize.css": "^8.0.1",
     "react": "^18.0.0-rc.0",
     "react-dom": "^18.0.0-rc.0",
-    "sharp": "^0.29.3",
+    "sharp": "^0.30.5",
     "three": "^0.137.0"
   },
   "devDependencies": {
